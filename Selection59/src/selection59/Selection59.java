@@ -95,8 +95,7 @@ public class Selection59 {
         switch (choice) {
             case 1:
                 result=number1+number2;    
-                break;
-                
+                break;        
                 
             case 3:
                 result=number1*number2;    
