@@ -6,13 +6,17 @@ public class PrimeNumber {
 
     public static void main(String[] args) {
 
-        Scanner s = new Scanner(System.in);
-        //System.out.println("Enter number to check Prime or not prime");
-
-       // int userInput = s.nextInt();
+        Scanner s=new Scanner(System.in);
+        
+        System.out.println("Enter Start point value");
+        int startPoint=s.nextInt();
+        System.out.println("Enter End Poitnt value");
+        int endPoint=s.nextInt();
+        
+        
         int count = 0;
 
-        for (int j = 1; j <= 100; j++) {
+        for (int j = startPoint; j <= endPoint; j++) {
             for (int i = 1; i <= j; i++) {
 
                 if (j % i == 0) {
