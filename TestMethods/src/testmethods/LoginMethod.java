@@ -2,7 +2,7 @@ package testmethods;
 
 import java.util.Scanner;
 
-public class TestMethod {
+public class LoginMethod {
 
     public static void main(String[] args) {
 
