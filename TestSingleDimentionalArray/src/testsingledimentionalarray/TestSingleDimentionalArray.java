@@ -17,6 +17,10 @@ public class TestSingleDimentionalArray {
             myList[i] = num;
 
         }
+        int min = 999999999;
+        int max = 0;
+        int min1 = 0;
+        int max1 = 0;
         int sum = 0;
         int avg = 0;
         int count = 0;
@@ -38,11 +42,36 @@ public class TestSingleDimentionalArray {
             }
         }
 
-        System.out.println(Arrays.toString(myList));
-        System.out.println(sum);
-        System.out.println(avg);
-        System.out.println(count);
-        System.out.println(Arrays.toString(newList));
+        for (int val : myList) {
+            if (max < val) {      // 0<5
+                max = val;      // max=5
+            }
+
+            if (min > val) {  //99 >5 
+                min = val;
+            }
+        }
+        
+        
+        for(int j=0; j < myList.length-1; j++){ //99
+           
+            if(myList[j] >= myList[j+1]){
+                max1=myList[j];  
+               System.out.println(max1);
+                               
+            }
+            
+            System.out.println(j);
+        }
+
+      System.out.println(Arrays.toString(myList));
+//        System.out.println(sum);
+//        System.out.println(avg);
+//        System.out.println(count);
+//        System.out.println(Arrays.toString(newList));
+//        System.out.println("max number is " + max);
+//        System.out.println("Min number is " + min);
+        System.out.println("Max1 number is " + max1);
 
     }
 
