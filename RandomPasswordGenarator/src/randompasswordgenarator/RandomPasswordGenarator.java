@@ -7,19 +7,25 @@ public class RandomPasswordGenarator {
 
     public static void main(String[] args) {
 
-        Scanner s=new Scanner(System.in);
-        
-        Random random = new Random();      
+        Scanner s = new Scanner(System.in);
+
         System.out.println("Enter password length");
-        int passLength=s.nextInt();
+        int passLength = s.nextInt();
         
+       String password= passGenarator(passLength);
+        System.out.println("Password is:  "+password);
+
+    }
+
+    public static String passGenarator(int passLength) {
+        Random random = new Random();
         String pass = "";
-        String finalPassword="";
+        String finalPassword = "";
 
         //System.out.println(range);
         for (int i = 1; i <= passLength; i++) {
-            
-             int range = random.nextInt(3) + 1;
+
+            int range = random.nextInt(3) + 1;
             switch (range) {
                 case 1:
                     pass += (char) (random.nextInt(26) + 65);
@@ -38,20 +44,17 @@ public class RandomPasswordGenarator {
 
         }
 
-        for(int i=0; i<pass.length(); i++){
-            
-            if (i==pass.length()/2){
-                finalPassword +="_"+pass.charAt(i);
-            }else{
-                finalPassword +=pass.charAt(i);
-            
-            }
-                
-        }
-        
-        
-        System.out.println(finalPassword);
+        for (int i = 0; i < pass.length(); i++) {
 
+            if (i == pass.length() / 2) {
+                finalPassword += "_" + pass.charAt(i);
+            } else {
+                finalPassword += pass.charAt(i); // pass=ABCD1234
+
+            }
+
+        }
+        return finalPassword;
     }
 
 }
