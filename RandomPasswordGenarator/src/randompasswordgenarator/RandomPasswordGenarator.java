@@ -1,20 +1,23 @@
 package randompasswordgenarator;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class RandomPasswordGenarator {
 
     public static void main(String[] args) {
 
-        Random random = new Random();
-
-       
-
+        Scanner s=new Scanner(System.in);
+        
+        Random random = new Random();      
+        System.out.println("Enter password length");
+        int passLength=s.nextInt();
+        
         String pass = "";
         String finalPassword="";
 
         //System.out.println(range);
-        for (int i = 1; i <= 8; i++) {
+        for (int i = 1; i <= passLength; i++) {
             
              int range = random.nextInt(3) + 1;
             switch (range) {
@@ -35,9 +38,9 @@ public class RandomPasswordGenarator {
 
         }
 
-        for(int i=0; i<8; i++){
+        for(int i=0; i<pass.length(); i++){
             
-            if (i==4){
+            if (i==pass.length()/2){
                 finalPassword +="_"+pass.charAt(i);
             }else{
                 finalPassword +=pass.charAt(i);
