@@ -24,7 +24,7 @@ public class TestArrayWithMethod {
     }
 
     public static int maxNumber(int[] myArray) {
-        int max = myArray[0];
+        int max = myArray[0];     
 
         for (int val : myArray) {
             if (max < val) {      // 0<5
