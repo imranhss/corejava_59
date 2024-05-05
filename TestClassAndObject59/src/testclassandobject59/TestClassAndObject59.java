@@ -13,9 +13,8 @@ public class TestClassAndObject59 {
         PrimeNumber pn = new PrimeNumber(9);
         MaxMin maxMin=new MaxMin();
         
-//        MaxMinChange.number1=10;
-//        MaxMinChange.findMaxNumber();
-//        
+        System.out.println(MaxMinChange.NUMBER1+10);
+        
         
 
         
