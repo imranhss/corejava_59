@@ -6,7 +6,7 @@ import java.math.BigInteger;
 
 public class Factoril {
     
-    int number=2;
+    int number;
 
     public Factoril() {
     }
