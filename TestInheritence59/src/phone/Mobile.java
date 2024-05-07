@@ -2,7 +2,7 @@
 package phone;
 
 
-public class Mobile {
+public class  Mobile {
     
     private boolean  makeCall;
     private String makeTextMessage;

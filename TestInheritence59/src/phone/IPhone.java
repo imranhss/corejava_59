@@ -1,6 +1,8 @@
 
 package phone;
 
+import java.util.Objects;
+
 
 public class IPhone extends Mobile{
     
@@ -37,6 +39,27 @@ public class IPhone extends Mobile{
     public void printDetails() {
         super.printDetails();
         System.out.println("Has "+appStore);// Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final IPhone other = (IPhone) obj;
+        return Objects.equals(this.appStore, other.appStore);
     }
     
     
