@@ -4,8 +4,8 @@ public class SavingsAccount extends BankAccount {
 
     private double interestRate;
 
-    public SavingsAccount(double initialBalance, double interestRate) {
-        this.balance = initialBalance;
+    public SavingsAccount(double balance, double interestRate) {
+        this.balance = balance;
         this.interestRate = interestRate;
     }
 

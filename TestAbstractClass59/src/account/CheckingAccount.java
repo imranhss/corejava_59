@@ -13,8 +13,8 @@ public class CheckingAccount extends BankAccount {
     private double withdrawalLimit;
     private double fee;
 
-    public CheckingAccount(double initialBalance, double withdrawalLimit, double fee) {
-        this.balance = initialBalance;
+    public CheckingAccount(double balance, double withdrawalLimit, double fee) {
+        this.balance = balance;
         this.withdrawalLimit = withdrawalLimit;
         this.fee = fee;
     }
