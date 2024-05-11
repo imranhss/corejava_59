@@ -50,5 +50,8 @@ public abstract class GeoMatryObject {
     public abstract double getArea();
 
     public abstract double getPerimeter();
+    
+   
+    
 
 }
