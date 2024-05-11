@@ -13,6 +13,7 @@ public class TestAbstractClass59 {
         GeoMatryObject rectangle = new Rectangle(2, 2);
 
         circle.setColor("Black");
+        
 
         displayGeometricObject(circle);
         displayGeometricObject(rectangle);
