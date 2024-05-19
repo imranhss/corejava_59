@@ -59,11 +59,7 @@ public class TestGeneric59 {
         
         System.out.println(pair.toString());
         System.out.println(pair1);
-        
-        
-       
-        
-
+     
         
     }
     
