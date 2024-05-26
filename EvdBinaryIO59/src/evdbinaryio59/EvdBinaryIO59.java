@@ -11,10 +11,10 @@ import java.util.List;
 public class EvdBinaryIO59 {
 
     private static final String FILE_NAME = "students.dat";
-    
-    
+
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();
+        
         students.add(new Student("Najmul", 20));
         students.add(new Student("Raju", 22));
         students.add(new Student("Nusrat", 19));
@@ -30,7 +30,8 @@ public class EvdBinaryIO59 {
     }
 
     public static void writeStudentsToFile(List<Student> students) {
-        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
+        try (
+                ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {
             oos.writeObject(students);
         } catch (IOException e) {
             System.err.println("Error writing to file: " + e.getMessage());
@@ -46,7 +47,5 @@ public class EvdBinaryIO59 {
         }
         return students;
     }
-
-    
 
 }
