@@ -1,6 +1,7 @@
 package dbcrud59;
 
 import entity.Student;
+import java.lang.reflect.Array;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,19 +21,33 @@ public class DBCrud59 {
 
         Student student = new Student();
         
-        List<Student> studentList=getById(1);
-        
-        
-        
-        
-        student.setName(studentList.get(0).getName());
-        student.setEmail("Rajujee59@gmail.com");
-        student.setAddress(studentList.get(0).getAddress());
-        student.setCell(studentList.get(0).getCell());
-        student.setId(studentList.get(0).getId());
+//        List<Student> studentList=getById(1);       
+//        
+//        student.setName(studentList.get(0).getName());
+//        student.setEmail("Rajujee59@gmail.com");
+//        student.setAddress(studentList.get(0).getAddress());
+//        student.setCell(studentList.get(0).getCell());
+//        student.setId(studentList.get(0).getId());
 
-        editData(student);
+        //editData(student);
+        
+        //deleteData(1);
+        
+        saveData();
+        System.out.println("Before");
         showData();
+        
+        student.setName("Nazmul Islam");
+        student.setEmail("nazmul420@gmail.com");
+        student.setAddress("Dhanmondi");
+        student.setCell("123456789");
+        student.setId(3);
+        
+        editData(student);
+        System.out.println("after");
+        showData();
+        
+        
 
     }
 
@@ -43,10 +58,10 @@ public class DBCrud59 {
         try {
             ps = db.getCon().prepareStatement(insertSql);
 
-            ps.setString(1, "Raju");
-            ps.setString(2, "Raju@gmail.com");
-            ps.setString(3, "Azimpur, Dhaka");
-            ps.setString(4, "4546546546");
+            ps.setString(1, "Nazmul");
+            ps.setString(2, "Nazmul@gmail.com");
+            ps.setString(3, "DHanmondi, Dhaka");
+            ps.setString(4, "546546");
 
             ps.executeUpdate();
             ps.close();
@@ -141,5 +156,29 @@ public class DBCrud59 {
         }
         return studentList;
     }
+    
+    
+    public static void deleteData(int id){
+    
+        String sql="delete from student where id=?";
+        
+        try {
+            ps=db.getCon().prepareStatement(sql);
+            ps.setInt(1, id);
+            
+            ps.executeUpdate();
+            
+            ps.close();
+            db.getCon().close();
+            System.out.println("Data deleted");
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DBCrud59.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+    
+    }
+    
+    
 
 }
